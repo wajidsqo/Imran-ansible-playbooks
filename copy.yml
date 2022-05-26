@@ -7,7 +7,7 @@
     - name: Copying file
       become: true
       copy:
-                         src: /home/ch/some.cfg
+                         src: /home/usr/some.cfg
                          dest: /tmp
                          owner: test
                          mode: 0644 
