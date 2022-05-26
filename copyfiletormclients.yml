@@ -3,7 +3,7 @@
 - name: Copy file to remote clients
   hosts: all
   vars: 
-   srcfile: /home/ch/sendingfile
+   srcfile: /home/usr/sendingfile
   tasks: 
 
        - name: Copying file
