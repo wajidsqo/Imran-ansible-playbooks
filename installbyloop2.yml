@@ -1,0 +1,13 @@
+---
+- name: Install packages thru loop
+  hosts: all
+  vars: 
+    packages: [ftp, telnet, htop]
+
+  tasks:
+  - name: Install packages
+    ansible.builtin.dnf
+      name: '{{ packages }}'
+      state: present
+
+

@@ -1,0 +1,10 @@
+---
+- name: user module demo
+  hosts: all
+  become: true
+  tasks:
+    - name: Delete users jerry, kramer, elaine
+      ansible.builtin.user:
+        name: jerry,kramer,elaine
+        state: "absent"
+        remove: true

@@ -1,0 +1,19 @@
+---
+- name: httpd and telnet
+  hosts: all
+
+  tasks:
+    - name: install httpd
+      dnf: 
+        name: httpd
+        state: present
+
+    - name: Start httpd
+      service:
+        name: httpd
+        state: started
+
+    - name: Install telnet
+      dnf:
+        name: telnet
+        state: present

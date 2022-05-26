@@ -1,0 +1,13 @@
+---
+- name: Install packages thru loop
+  hosts: localhost
+  vars:
+   packages: [ftp,telnet,htop)  
+
+  tasks:
+   - name: Install package
+     ansible.builtin.yum:
+        name: ‘{{items}}’
+         state: present
+     loop: ‘{{packages}}’
+

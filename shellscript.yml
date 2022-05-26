@@ -1,0 +1,9 @@
+---
+
+- name: Playbook for shell script
+  hosts: all or 192.168.68.61
+
+  tasks: 
+             - name: Run shell script
+               shell: "/home/test/cfile.sh"
+

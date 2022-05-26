@@ -1,0 +1,16 @@
+---
+
+- name: Installing and Running apache
+  hosts: localhost
+
+
+  tasks:
+             - name: install apache
+               dnf: 
+                 name: httpd
+                 state: present
+
+             - name: start httpd
+               service:
+                 name: httpd
+                 state: started 

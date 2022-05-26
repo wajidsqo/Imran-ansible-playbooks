@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Update dnf cache and make sure Apache, Chrony and DNS are installed
+      dnf:
+        name: "{{ item }}"
+        update_cache: yes
+      loop:
+        - httpd
+        - chrony
+        - bind9

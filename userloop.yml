@@ -1,0 +1,16 @@
+---
+- name: Create users
+  hosts: all
+
+  tasks:
+  - name: Create jerry
+    user:
+      name: jerry
+   
+  - name: Create kramer
+    user:
+      name: kramer
+
+  - name: Create eliane
+    user: 
+      name: eliane
