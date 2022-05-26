@@ -1,7 +1,7 @@
 ---
 
 - name: Playbook for shell script
-  hosts: all or 192.168.68.61
+  hosts: all or # Add your IP here
 
   tasks: 
              - name: Run shell script
